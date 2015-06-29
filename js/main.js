@@ -1,5 +1,10 @@
 (function(){
   
+  //init all sounds but instantly pause them, so they can be reached on mobile devices 
+  playSound($(".col").data('beep'));
+  player.play();
+  player.pause();
+
 
   var sequence = new Array();     
 	$(".col").on("click", function(e){
