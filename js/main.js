@@ -1,6 +1,6 @@
 (function(){
     var sequence = new Array();     
-  $(".col").on("click", function(e){
+  $(".col").on("touchstart", function(e){
     
     var x = e.pageX;
     var y = e.pageY;
@@ -43,18 +43,22 @@
   var blueSound = document.getElementById('blue-sound');
 
 
-  $("#color-green").click(function() {
+  $("#color-green").on("touchstart", function(){
     document.getElementById('green-sound').play();
+     AndroidFunction.onClickButton(1);
   })
-  $("#color-red").click(function() {
+  $("#color-red").on("touchstart", function(){
     document.getElementById('red-sound').play();
+     AndroidFunction.onClickButton(2);
   })
-  $("#color-yellow").click(function() {
+  $("#color-yellow").on("touchstart", function(){
     document.getElementById('yellow-sound').play();
+     AndroidFunction.onClickButton(3);
   })
-  $("#color-blue").click(function() {
+  $("#color-blue").on("touchstart", function(){
     document.getElementById('blue-sound').play();
-  })    
+     AndroidFunction.onClickButton(4);
+  })       
 
 
 
