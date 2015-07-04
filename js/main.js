@@ -44,19 +44,19 @@
 
 
   $("#color-green").on("touchstart", function(){
-    document.getElementById('green-sound').play();
+    //document.getElementById('green-sound').play();
      AndroidFunction.onClickButton(1);
   })
   $("#color-red").on("touchstart", function(){
-    document.getElementById('red-sound').play();
+    //document.getElementById('red-sound').play();
      AndroidFunction.onClickButton(2);
   })
   $("#color-yellow").on("touchstart", function(){
-    document.getElementById('yellow-sound').play();
+    //document.getElementById('yellow-sound').play();
      AndroidFunction.onClickButton(3);
   })
   $("#color-blue").on("touchstart", function(){
-    document.getElementById('blue-sound').play();
+    //document.getElementById('blue-sound').play();
      AndroidFunction.onClickButton(4);
   })       
 
