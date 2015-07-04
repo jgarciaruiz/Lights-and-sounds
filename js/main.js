@@ -1,18 +1,11 @@
 (function(){
-  
-  //init all sounds but instantly pause them, so they can be reached on mobile devices 
-  playSound($(".col").data('beep'));
-  player.play();
-  player.pause();
-
-
-  var sequence = new Array();     
-	$(".col").on("click", function(e){
+    var sequence = new Array();     
+  $(".col").on("click", function(e){
     
-		var x = e.pageX;
-		var y = e.pageY;
-		var clickY = y - $(this).offset().top;
-		var clickX = x - $(this).offset().left;
+    var x = e.pageX;
+    var y = e.pageY;
+    var clickY = y - $(this).offset().top;
+    var clickX = x - $(this).offset().left;
     var box = this;
     
     var setX = parseInt(clickX);
@@ -29,13 +22,12 @@
         {
           easing: "easeOutQuad",
           duration: 400,
-         	step : function(val){
-						c.attr("r", val);
-					}
+          step : function(val){
+            c.attr("r", val);
+          }
         }
       );
 
-      playSound($(this).data('beep'));
 
       sequence.push( $(this).data('beep'));
       console.info(sequence);
@@ -45,18 +37,25 @@
   });
 
 
-  function playSound(beep) {
-    var audio = $('<audio autoplay></audio>');
-    audio.append('<source src="sounds/' + beep + '.ogg" type="audio/ogg" />');
-    audio.append('<source src="sounds/' + beep + '.mp3" type="audio/mp3" />');
-    $('[data-action=sound]').html(audio);
-  }
+  var greenSound = document.getElementById('green-sound');
+  var redSound = document.getElementById('red-sound');
+  var yellowSound = document.getElementById('yellow-sound');
+  var blueSound = document.getElementById('blue-sound');
 
 
-  //iA
-  function randomNumber() {
-    return Math.floor((Math.random()*4)+1);
-  }
-  
+  $("#color-green").click(function() {
+    document.getElementById('green-sound').play();
+  })
+  $("#color-red").click(function() {
+    document.getElementById('red-sound').play();
+  })
+  $("#color-yellow").click(function() {
+    document.getElementById('yellow-sound').play();
+  })
+  $("#color-blue").click(function() {
+    document.getElementById('blue-sound').play();
+  })    
+
+
 
 }());
